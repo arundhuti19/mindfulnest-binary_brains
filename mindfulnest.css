@@ -32,8 +32,8 @@ h1 {
 
 /* Login button styles */
 .login-btn {
-  background: #ffffff; /* White button color */
-  color: #3e8e41; /* Darker green text color */
+  background: #ffccd5; /* Light pink button color */
+  color: #ffffff; /* White text color */
   border: none; /* No border */
   padding: 10px 20px; /* Padding inside the button */
   border-radius: 5px; /* Rounded corners */
@@ -43,7 +43,7 @@ h1 {
 
 /* Login button hover effect */
 .login-btn:hover {
-  background: #eaeaea; /* Light grey on hover */
+  background: #ffb3c1; /* Darker pink on hover */
 }
 
 /* Main content styles */
@@ -86,7 +86,7 @@ main {
 
 /* General button styles */
 button {
-  background: #ffcc00; /* Bright button color */
+  background: #ff99ac; /* Medium pink button color */
   color: white; /* Button text color */
   border: none; /* No border */
   padding: 15px 25px; /* Padding inside the button */
@@ -98,7 +98,7 @@ button {
 
 /* Button hover effect */
 button:hover {
-  background: #ffb300; /* Darker yellow on hover */
+  background: #ff85a1; /* Darker pink on hover */
 }
 
 /* Contact Us section styles */
@@ -119,7 +119,7 @@ button:hover {
 
 /* Social button styles */
 .social-btn {
-  background: #ff6f61; /* Bright red for social buttons */
+  background: #ff6680; /* Bright pink for social buttons */
   color: white; /* Button text color */
   text-decoration: none; /* Remove underline from links */
   padding: 15px 25px; /* Padding inside the button */
@@ -130,6 +130,6 @@ button:hover {
 
 /* Social button hover effect */
 .social-btn:hover {
-  background: #ff3f30; /* Darker red on hover */
+  background: #ff4d6d; /* Darker pink on hover */
   transform: scale(1.05); /* Slightly grow button on hover */
 }
