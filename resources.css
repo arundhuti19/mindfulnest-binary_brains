@@ -1,0 +1,124 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffcccb, #add8e6);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6f61;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.dropbtn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.dropbtn:hover {
+  background-color: #ffcccb;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffcccb;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.about-us, .contact-us {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-us h2, .contact-us h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.contact-us ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-us li {
+  margin: 10px 0;
+}
+
+.contact-us a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+.contact-us a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  text-align: center;
+  padding: 10
+
+
+
+}

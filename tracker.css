@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(to bottom right, #f0e1ff, #a0d4fa);
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.emotion-buttons {
+  margin: 20px 0;
+}
+
+.mood-button {
+  padding: 10px 15px;
+  margin: 5px;
+  background: #a0d4fa;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mood-button:hover {
+  background: #7ec3e8;
+}
+
+.calendar {
+  margin-top: 20px;
+}
+
+#login-container, #login-form, #signup-form {
+  margin: 20px 0;
+}
+
+input[type="text"], input[type="password"], input[type="date"] {
+  padding: 10px;
+  border: 2px solid #a0d4fa;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: 200px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  background: #a0d4fa;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #7ec3e8;
+}
+
+.chart-container {
+  margin: 20px auto;
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+}

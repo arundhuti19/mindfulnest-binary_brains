@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #5C6BC0, #AB47BC, #FF4081);
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.helplines, .about-us, .contact-us {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+a {
+  color: #FFEB3B;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+}

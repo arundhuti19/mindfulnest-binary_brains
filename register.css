@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+  font-family: 'Raleway', sans-serif; /* Clean font */
+  background: linear-gradient(to bottom right, #f9f3e9, #f0e1ff); /* Soft pastel background */
+  color: #333; /* Text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* Header Styles */
+header {
+  text-align: center; /* Centered text */
+  padding: 20px; /* Padding around header */
+}
+
+/* Main Content Styles */
+main {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Register Container Styles */
+.register-container {
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  padding: 40px; /* Increased padding for a spacious feel */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  max-width: 400px; /* Max width for the container */
+  width: 90%; /* Responsive width */
+  text-align: center; /* Center text inside container */
+}
+
+/* Form Styles */
+.register-form {
+  display: flex; /* Use flex for form layout */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Form Group Styles */
+.form-group {
+  margin: 15px 0; /* Margin for form groups */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding inside input */
+  border: 1px solid #d0d0d0; /* Light grey border */
+  border-radius: 8px; /* Rounded corners */
+  background: #f7f7f7; /* Light background for inputs */
+}
+
+/* Button Styles */
+button {
+  background: #a0d4fa; /* Soft blue button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 12px 20px; /* Padding inside the button */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size for buttons */
+  transition: background 0.3s; /* Smooth transition */
+  margin-top: 15px; /* Margin above button */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: #7ec3e8; /* Darker blue on hover */
+}
+
+/* Link Styles */
+a {
+  color: #6a4e1c; /* Dark brown for links */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Small Text Styles */
+small {
+  color: #777; /* Light grey for small text */
+  display: block; /* Block display for better spacing */
+  margin-top: 5px; /* Margin above small text */
+}

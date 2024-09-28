@@ -1,0 +1,135 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif; /* Mature and friendly font */
+  background: linear-gradient(135deg, #e0c3fc, #f9d0c4); /* Soft blue-pink-purple gradient */
+  color: #333; /* Text color */
+}
+
+/* Header styles */
+header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Padding around the header */
+}
+
+/* Heading styles */
+h1 {
+  font-family: Arial, Helvetica, sans-serif, cursive; /* Pretty font */
+  font-size: 3em; /* Large heading size */
+  text-align: center; /* Center the text */
+  text-decoration: underline; /* Underline the heading */
+  color: #5b5ea6; /* Darker gradient color */
+  margin: 0; /* Remove margin */
+}
+
+/* Login button styles */
+.login-btn {
+  background: #ffffff; /* White button color */
+  color: #3e8e41; /* Darker green text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s; /* Smooth transition */
+}
+
+/* Login button hover effect */
+.login-btn:hover {
+  background: #eaeaea; /* Light grey on hover */
+}
+
+/* Main content styles */
+main {
+  text-align: center; /* Center text */
+  margin: 50px 20px; /* Margin around main content */
+}
+
+/* Moody cupcake heading styles */
+.moody-cupcake {
+  font-size: 2em; /* Larger font for the welcome message */
+  color: #ff69b4; /* Pink color */
+}
+
+/* Mission section styles */
+.mission {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 20px; /* Padding for mission section */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px 0; /* Margin above and below */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* About Us section styles */
+.about-us {
+  background: #ffe1f0; /* Light pink background */
+  padding: 20px; /* Padding for about section */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px 0; /* Margin above and below */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Button styles */
+.buttons, .contact-buttons {
+  display: flex; /* Use flexbox for buttons */
+  justify-content: center; /* Center buttons */
+  gap: 10px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow wrapping to new line */
+}
+
+/* General button styles */
+button {
+  background: #ffcc00; /* Bright button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 15px 25px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size for buttons */
+  transition: background 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+button:hover {
+  background: #ffb300; /* Darker yellow on hover */
+}
+
+/* Contact Us section styles */
+.contact-us {
+  background: linear-gradient(135deg, #ffcccb, #ffb3e6); /* Gradient background */
+  padding: 20px; /* Padding for contact section */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px 0; /* Margin above and below */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Contact button styles */
+.contact-buttons {
+  display: flex; /* Use flexbox for buttons */
+  justify-content: center; /* Center buttons */
+  gap: 15px; /* Space between buttons */
+}
+
+/* Social button styles */
+.social-btn {
+  background: #ff6f61; /* Bright red for social buttons */
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 15px 25px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Social button hover effect */
+.social-btn:hover {
+  background: #ff3f30; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly grow button on hover */
+}
