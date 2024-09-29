@@ -77,7 +77,7 @@ main {
 }
 
 /* Button styles */
-.buttons, .contact-buttons {
+.buttons {
   display: flex; /* Use flexbox for buttons */
   justify-content: center; /* Center buttons */
   gap: 10px; /* Space between buttons */
@@ -132,4 +132,9 @@ button:hover {
 .social-btn:hover {
   background: #ff4d6d; /* Darker pink on hover */
   transform: scale(1.05); /* Slightly grow button on hover */
+}
+
+/* Social icon styles */
+.social-btn i {
+  margin-right: 8px; /* Space between icon and text */
 }

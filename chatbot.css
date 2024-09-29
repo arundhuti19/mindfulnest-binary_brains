@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+  background: linear-gradient(to right, #a1c4fd, #ffcccb, #d4a5f6); /* Blue, Pink, Purple gradient */
+  font-family: 'Georgia', serif; /* A more classic, witchy font */
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container Styling */
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for containers */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+h1, h2 {
+  color: #5c4b8a; /* Dark lavender for headings */
+}
+
+/* Button Styles */
+button {
+  background-color: #ffcccb; /* Light pink */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9999; /* Slightly darker pink */
+}
+
+/* Paragraph Styles */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #4a4a4a; /* Dark gray for better readability */
+  padding: 10px;
+  border-left: 4px solid #5c4b8a; /* Decorative left border */
+  background-color: rgba(255, 255, 255, 0.9); /* White background for paragraphs */
+  border-radius: 5px;
+}
+
+/* Additional Responsive Design */
+@media (max-width: 600px) {
+  button {
+      width: 100%;
+      font-size: 14px;
+  }
+
+  h1 {
+      font-size: 24px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+}

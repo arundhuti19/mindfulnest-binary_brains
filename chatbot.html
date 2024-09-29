@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatbot.css">
+    <title>Cheese - AI Chatbot</title>
+</head>
+<body>
+    <div class="container" id="main-container">
+        <h1>Listen to Cheese 🧀💖</h1>
+        <p>Please choose a mental health problem:</p>
+        <div id="buttons-container">
+            <button onclick="showProblem('anxiety')">Anxiety Disorders</button>
+            <button onclick="showProblem('depression')">Depression</button>
+            <button onclick="showProblem('bipolar')">Bipolar Disorder</button>
+            <button onclick="showProblem('ptsd')">Post-Traumatic Stress Disorder (PTSD)</button>
+            <button onclick="showProblem('schizophrenia')">Schizophrenia</button>
+            <button onclick="showProblem('eating')">Eating Disorders</button>
+            <button onclick="showProblem('disruptive')">Disruptive Behavior</button>
+            <button onclick="showProblem('neurodevelopmental')">Neurodevelopmental Disorders</button>
+            <a href="helpline.html"><button >Talk to Someone</button></a>
+        </div>
+    </div>
+
+    <div class="container" id="problem-container" style="display: none;">
+        <button onclick="goBack()">Back</button>
+        <div id="problem-content"></div>
+    </div>
+
+    <div class="container" id="helpline-container" style="display: none;">
+        <button onclick="goBack()">Back</button>
+        <h1>Talk to Someone</h1>
+        <p>If you need immediate assistance, please contact a helpline:</p>
+        <p>Helpline numbers: <br> - National Suicide Prevention Lifeline: 1-800-273-8255 <br> - SAMHSA National Helpline: 1-800-662-HELP</p>
+    </div>
+
+    <script>
+        function showProblem(problem) {
+            const mainContainer = document.getElementById('main-container');
+            const problemContainer = document.getElementById('problem-container');
+            const problemContent = document.getElementById('problem-content');
+
+            mainContainer.style.display = 'none';
+            problemContainer.style.display = 'block';
+
+            let content = '';
+
+            switch (problem) {
+                case 'anxiety':
+                    content = `
+                        <h1>Anxiety Disorders</h1>
+                        <button onclick="showInfo('anxiety_info')">What to Do</button>
+                        <button onclick="showInfo('anxiety_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('anxiety_causes')">Causes</button>
+                        <button onclick="showInfo('anxiety_treatments')">Treatments</button>
+                        <button onclick="showInfo('anxiety_help')">Receive Help</button>
+                    `;
+                    break;
+                case 'depression':
+                    content = `
+                        <h1>Depression</h1>
+                        <button onclick="showInfo('depression_info')">What to Do</button>
+                        <button onclick="showInfo('depression_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('depression_causes')">Causes</button>
+                        <button onclick="showInfo('depression_treatments')">Treatments</button>
+                        <button onclick="showInfo('depression_help')">Receive Help</button>
+                    `;
+                    break;
+                case 'bipolar':
+                    content = `
+                        <h1>Bipolar Disorder</h1>
+                        <button onclick="showInfo('bipolar_info')">What to Do</button>
+                        <button onclick="showInfo('bipolar_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('bipolar_causes')">Causes</button>
+                        <button onclick="showInfo('bipolar_treatments')">Treatments</button>
+                        <button onclick="showInfo('bipolar_help')">Receive Help</button>
+                    `;
+                    break;
+                case 'ptsd':
+                    content = `
+                        <h1>Post-Traumatic Stress Disorder (PTSD)</h1>
+                        <button onclick="showInfo('ptsd_info')">What to Do</button>
+                        <button onclick="showInfo('ptsd_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('ptsd_causes')">Causes</button>
+                        <button onclick="showInfo('ptsd_treatments')">Treatments</button>
+                        <button onclick="showInfo('ptsd_help')">Receive Help</button>
+                    `;
+                    break;
+                case 'schizophrenia':
+                    content = `
+                        <h1>Schizophrenia</h1>
+                        <button onclick="showInfo('schizophrenia_info')">What to Do</button>
+                        <button onclick="showInfo('schizophrenia_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('schizophrenia_causes')">Causes</button>
+                        <button onclick="showInfo('schizophrenia_treatments')">Treatments</button>
+                        <button onclick="showInfo('schizophrenia_help')">Receive Help</button>
+                    `;
+                    break;
+                case 'eating':
+                    content = `
+                        <h1>Eating Disorders</h1>
+                        <button onclick="showInfo('eating_info')">What to Do</button>
+                        <button onclick="showInfo('eating_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('eating_causes')">Causes</button>
+                        <button onclick="showInfo('eating_treatments')">Treatments</button>
+                        <button onclick="showInfo('eating_help')">Receive Help</button>
+                    `;
+                    break;
+                case 'disruptive':
+                    content = `
+                        <h1>Disruptive Behavior Disorders</h1>
+                        <button onclick="showInfo('disruptive_info')">What to Do</button>
+                        <button onclick="showInfo('disruptive_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('disruptive_causes')">Causes</button>
+                        <button onclick="showInfo('disruptive_treatments')">Treatments</button>
+                        <button onclick="showInfo('disruptive_help')">Receive Help</button>
+                    `;
+                    break;
+                case 'neurodevelopmental':
+                    content = `
+                        <h1>Neurodevelopmental Disorders</h1>
+                        <button onclick="showInfo('neurodevelopmental_info')">What to Do</button>
+                        <button onclick="showInfo('neurodevelopmental_symptoms')">Symptoms</button>
+                        <button onclick="showInfo('neurodevelopmental_causes')">Causes</button>
+                        <button onclick="showInfo('neurodevelopmental_treatments')">Treatments</button>
+                        <button onclick="showInfo('neurodevelopmental_help')">Receive Help</button>
+                    `;
+                    break;
+            }
+
+            problemContent.innerHTML = content;
+        }
+
+        function showInfo(info) {
+            const problemContainer = document.getElementById('problem-container');
+            const problemContent = document.getElementById('problem-content');
+
+            let content = '';
+
+            switch (info) {
+                case 'anxiety_info':
+                    content = `<h2>What to Do About Anxiety</h2><p>Oh, sweet friend! If you’re feeling those anxious butterflies in your tummy, don’t worry; you’re not alone! First, take a deep breath—let’s inhale through the nose and exhale through the mouth like a gentle breeze. 🍃 Finding a cozy spot to cuddle up can really help! It might be a comfy chair, your favorite blanket, or even a sunny spot by the window. Try some relaxation techniques like gentle stretching or a soothing yoga routine—think of it as a warm hug for your body! 🧘‍♀️ You can also write down your feelings in a journal; it's like chatting with a friend who won’t judge! Talking to someone you trust can lighten your load too—sharing is caring! And don’t forget, indulging in a bit of self-care, like a warm cup of chamomile tea or a nice bubble bath, can do wonders. 🛁✨ Remember, taking small steps is perfectly okay. You’re doing great, and every little effort counts!.</p>`;
+                    break;
+                case 'anxiety_symptoms':
+                    content = `<h2>Anxiety Symptoms</h2><p>Oh, my dear cheese-loving friend, anxiety can sometimes feel like a little cloud hovering over you! ☁️ It might make your heart race like a playful mouse or give you that fluttery feeling in your tummy. Some folks feel restless, like they’ve had one too many cups of coffee! ☕️ Others may find it hard to focus, as if their thoughts are jumping around like bouncy balls. You might even notice some physical signs, like sweating or a shaky voice when speaking. It’s also common to feel a bit more on edge or irritable, like a cat who just wants to nap but can’t find a cozy spot! 🐱 Remember, everyone experiences anxiety differently—just like how we all have our favorite cheeses! 🧀 If you notice these symptoms, it’s okay to reach out for help. You're not alone in this cheesy adventure!.</p>`;
+                    break;
+                case 'anxiety_causes':
+                    content = `<h2>Ah, the little gremlins of anxiety have many reasons for visiting! 🧙‍♂️ Sometimes it’s a mix of genetics, meaning if someone in your family has had it, you might too—just like how cheese runs in the family! 🧀 Other times, it can be triggered by stressful events, like moving to a new place or starting a new job, which can feel as big as a giant cheese wheel! 🧀✨ Our brains are sensitive, and factors like a busy lifestyle or lack of sleep can stir up those anxious feelings. Plus, our experiences—like facing challenges or feeling overwhelmed—can also contribute. It’s important to remember that anxiety is just a part of being human, and it can be managed with love and care! 🌼 Seeking help from a professional can help you understand your cheese-filled mind and find ways to create a more peaceful space!</p>`;
+                    break;
+                case 'anxiety_treatments':
+                    content = `<h2>Oh, lovely cheese friend, there are many delightful ways to manage anxiety! 🍰 One popular method is talking therapy, like Cognitive Behavioral Therapy (CBT), where you can share your feelings and learn to challenge those anxious thoughts! It’s like having a friendly cheese-tasting party for your mind! 🎉 Medication can also be an option, helping to balance those pesky chemicals in your brain, like a perfect cheese pairing! It’s essential to work with a healthcare provider to find what suits you best. 🌈 Additionally, practicing mindfulness and meditation can help you find your calm center—imagine being a peaceful cheese wheel rolling gently down a hill! 🧘‍♂️ And let’s not forget about lifestyle changes! Regular exercise, a balanced diet, and getting enough sleep can all play a part in reducing anxiety—just like cheese needs the right conditions to be its best! Remember, you’re on a journey, and each step counts toward feeling better! 🌟</p>`;
+                    break;
+                case 'anxiety_help':
+                    content = `<h2>Getting Help for Anxiety</h2><p>Oh, lovely friend, seeking help is like choosing the perfect cheese to pair with your favorite wine—so important! 🍷🧀 If anxiety is making your heart race, remember, you don’t have to face it alone! The first step is talking to a mental health professional. They’re like the cheese experts of feelings, helping you find the right tools to navigate anxiety! 🌈✨
+
+You might also want to reach out to hotlines, which are just a call away. They provide a listening ear and support whenever you need it—like having a warm, comforting blanket during a chilly day! 📞💖
+
+And don’t forget about support groups! Connecting with others who share similar experiences can feel like sharing a delightful cheese board with friends—full of understanding and warmth! 🥳
+
+Lastly, talk to your family and friends. They love you and want to help! Sharing your feelings can lighten the load, making it feel a little less heavy. Remember, you’re never alone, and there’s a community ready to support you on this journey! Together, we can sprinkle kindness and love everywhere! 🌼💕</p>`;
+                    break;
+                case 'depression_info':
+                    content = `<h2>What to Do About Depression</h2><p>When the weight of depression feels heavy, sprinkle some love into your routine! 💖 Start by reaching out to someone you trust—sharing your feelings can be comforting! Regular self-care is vital too; think of it as nurturing your own little cheese plant! 🧀🌱 Take walks in nature or try journaling to express your feelings. Creating a structured daily routine can provide a sense of purpose. Surround yourself with uplifting activities, whether it’s reading a cozy book 📚 or enjoying a warm cup of tea ☕. Remember, it’s okay to take baby steps. Every little action adds a sprinkle of joy to your day. You’re doing great, and with time, brighter days will come! ☀️</p>`;
+                    break;
+                case 'depression_symptoms':
+                    content = `<h2>Depression Symptoms</h2><p>Understanding the symptoms of depression is so important! It can feel like a fog settling in, making everything seem gray. 🌫️ Common signs include persistent sadness 😢, loss of interest in activities, and changes in appetite or sleep patterns. You might also feel fatigue, trouble concentrating, or experience feelings of worthlessness. 💔 Emotional changes, such as irritability, can pop up too. If you notice these symptoms lingering, it’s crucial to reach out for support! Acknowledging these feelings is a brave first step, and you are not alone in this journey! 🤗</p>`;
+                    break;
+                case 'depression_causes':
+                    content = `<h2>Causes of Depression</h2><p>Depression can feel puzzling, and its causes are often complex! 🧩 Genetics can play a role; sometimes, it runs in families. Life events like loss, trauma, or major changes can also contribute. 😟 Hormonal changes can influence your mood, and medical conditions can create a heavy cloud. Stress and lifestyle factors, like lack of sleep or poor diet, can worsen feelings of sadness. 🌧️ Understanding these causes can be the first step toward finding brighter days ahead! You are not alone, and there’s support waiting to help you! 🌈</p>`;
+                    break;
+                case 'depression_treatments':
+                    content = `<h2>Depression Treatments</h2><p>When it comes to treating depression, there are many delightful options available! 🎉 Therapy is often a fantastic first step. Whether it’s talk therapy or cognitive-behavioral therapy (CBT), a mental health professional can help you navigate those cloudy feelings. ☁️ Sometimes, medication can help balance your brain, making everything feel more stable. 💊 Always consult with a healthcare provider to find the right fit for you. Lifestyle changes can also play a key role! Incorporating regular exercise 🏃‍♀️, a balanced diet 🥗, and enough sleep can make a difference. Mindfulness and relaxation techniques can help reduce stress. 🧘‍♀️ Each small step is a victory! 🎊</p>`;
+                    break;
+                case 'depression_help':
+                    content = `<h2>Getting Help for Depression</h2><p>It’s so brave to seek help when feeling down! 💪 Consider talking to a mental health professional. Therapists are like friendly guides who can help you navigate your feelings, offering tools to manage depression. 🌟 If you feel overwhelmed, hotlines can be a comforting resource. 📞 They’re available 24/7, ready to listen without judgment. Support groups can provide comfort too! Connecting with others who share similar experiences can be as comforting as enjoying a cozy cheese platter with friends! 🧀🤗 Lean on your loved ones; talking to family or friends can provide comfort. You are not alone, and there’s a community ready to support you! 🌼</p>`;
+                    break;
+                case 'bipolar_info':
+                    content = `<h2>What to Do About Bipolar Disorder</h2><p>Living with bipolar disorder can feel like riding a rollercoaster! 🎢 It's super important to have a plan in place. Start by keeping a mood diary 📖 to track changes in your feelings and triggers. Regularly connect with your healthcare team; they’re your cheerleaders on this journey! 📣 Building a strong support system with friends and family can make all the difference. Don't hesitate to share your experiences with them—communication is key! 💬 Prioritize self-care with activities that bring you joy and peace, like painting, gardening, or snuggling with a favorite book! 🎨🌼 Establishing a routine can help stabilize your mood, too! Remember, it's okay to take things one step at a time. Celebrate each small victory, and know that brighter days are on the horizon! 🌈</p>`;
+                    break;
+                case 'bipolar_symptoms':
+                    content = `<h2>Bipolar Disorder Symptoms</h2><p>Bipolar disorder can be tricky to understand, but knowing its symptoms can help! 🌟 People often experience dramatic mood swings that can include periods of intense happiness (mania) and deep sadness (depression). During manic phases, you might feel super energetic, talkative, or have racing thoughts! 🎉 You might find it hard to sleep, too. On the flip side, depressive episodes can bring feelings of hopelessness, fatigue, or loss of interest in activities. 😞 Changes in sleep patterns, appetite, and concentration can also occur. It’s important to recognize these symptoms to seek the right help! You are not alone, and understanding your feelings is a strong first step toward balance! 🥰</p>`;
+                    break;
+                case 'bipolar_causes':
+                    content = `<h2>Causes of Bipolar Disorder</h2><p>The causes of bipolar disorder are like a puzzle with many pieces! 🧩 Genetics can play a significant role; it often runs in families. Environmental factors, such as traumatic experiences or significant stress, can also trigger episodes. 🌪️ Changes in brain chemistry might contribute to the mood swings as well. Understanding that it’s a combination of factors can help you find comfort in knowing it's not your fault! 🥺 Hormonal changes and lifestyle can influence your symptoms too. Everyone’s experience is unique, and finding what works for you is important! Remember, there’s hope and support available on this journey! 🌈</p>`;
+                    break;
+                case 'bipolar_treatments':
+                    content = `<h2>Bipolar Disorder Treatments</h2><p>Treating bipolar disorder involves a mix of strategies, like a well-balanced cheese platter! 🧀🎉 Medication can help stabilize mood swings, so consulting a healthcare professional is essential. Mood stabilizers and antipsychotic medications can be effective. Always communicate openly with your doctor about what works for you! 🌼 Therapy, particularly cognitive-behavioral therapy (CBT), can provide tools to manage symptoms and develop coping strategies. 🧘‍♀️ Establishing a daily routine and practicing self-care—like regular exercise and a balanced diet—can also play a vital role! 🌟 Connecting with support groups can provide understanding and encouragement. Remember, every small step counts! You’re doing wonderfully! 💕</p>`;
+                    break;
+                case 'bipolar_help':
+                    content = `<h2>Getting Help for Bipolar Disorder</h2><p>Reaching out for help is one of the bravest things you can do! 💪 Connecting with a mental health professional is a fantastic first step; they can help guide you through managing bipolar disorder. 📞 Don’t hesitate to discuss your feelings openly! Support groups can provide a safe space where you can share experiences with others who understand. 🫂 You might also find comfort in hotlines, available 24/7, ready to listen without judgment. Building a strong support network of friends and family is equally important—don’t shy away from sharing your journey with them! 🌼 Remember, seeking help is a sign of strength, and brighter days are ahead! 🌈</p>`;
+                    break;
+                case 'ptsd_info':
+                    content = `<h2>What to Do About PTSD</h2><p>When dealing with PTSD, taking steps towards healing can feel like a cozy journey! 🌈 First, create a comforting space around you. Snuggle up in a warm blanket or sip your favorite tea while you breathe deeply! 🧘‍♀️ Connecting with a trusted friend or family member can lighten your heart—sharing your feelings helps a lot! It’s also super important to seek a mental health professional who can provide support tailored just for you. 🌟 Finding joy in small activities, like doodling, listening to music, or gardening, can also lift your spirits. 🌼 And don’t forget to celebrate every little step you take—each is a victory! You’re not alone in this journey; there are warm hugs and brighter days ahead! 💖</p>`;
+                    break;
+                case 'ptsd_symptoms':
+                    content = `<h2>PTSD Symptoms</h2><p>PTSD can show up in different ways, and recognizing these symptoms is a lovely step toward healing! 🌼 Some may experience flashbacks, where they relive past events as if they’re happening again—such a tough feeling! 😢 Nightmares can disturb your sweet dreams too, making it hard to sleep soundly. Night sweats or being easily startled are also common. 😮‍💨 You might notice feelings of emotional numbness or difficulty connecting with loved ones, which can feel lonely. Mood swings and anxiety can pop up too! 🌪️ Understanding these symptoms helps you know you're not alone, and seeking support can lead to brighter days! Remember, it's okay to reach out for help and take care of yourself! 💕</p>`;
+                    break;
+                case 'ptsd_causes':
+                    content = `<h2>Causes of PTSD</h2><p>PTSD often comes from experiencing or witnessing traumatic events, and it’s totally okay to feel this way! 🌈 It can be triggered by situations like military combat, accidents, natural disasters, or personal assaults. 🌀 Everyone responds differently to trauma, which is why understanding that it’s not a sign of weakness is important! 🧩 Sometimes, genetics might influence how we handle stress, too. If you’ve had past trauma or lacked support, it could make you more vulnerable to developing PTSD. 💖 Knowing you’re not alone in this journey can help you find the support and love you need to heal. 🌟 Remember, there are people and resources ready to help you through! You are deserving of kindness and understanding! 🌼</p>`;
+                    break;
+                case 'ptsd_treatments':
+                    content = `<h2>PTSD Treatments</h2><p>Treating PTSD often involves a mix of therapies that are like warm hugs for your heart! 💖 Cognitive-behavioral therapy (CBT) can help reframe those pesky negative thoughts, while eye movement desensitization and reprocessing (EMDR) guides you gently through those difficult memories. 🌈 Sometimes, medications like antidepressants can support your healing journey, too. Remember to sprinkle in self-care—activities like drawing, listening to cozy music, or snuggling with pets can bring you joy! 🐾 Support groups are a fabulous way to connect with others who understand your journey; you’re not alone! 🌟 You deserve all the love and support on your path to healing, so embrace it with open arms! 💕</p>`;
+                    break;
+                case 'ptsd_help':
+                    content = `<h2>Getting Help for PTSD</h2><p>Reaching out for help when you're feeling the weight of PTSD is an incredibly brave step! 🌼 Connecting with a mental health professional can provide you with valuable tools and a warm shoulder to lean on. 📞 Hotlines are available 24/7 for those moments when you need someone to chat with—no judgment, just support! 🫂 Joining support groups lets you meet others who share similar experiences; together, you can encourage each other! 🌈 It’s important to share your feelings with trusted friends or family, as they can offer love and understanding. Remember, asking for help is a sign of strength, and there’s a whole world of support waiting for you! 🌟 Every little step you take toward healing is a victory worth celebrating! 💖</p>`;
+                    break;
+                case 'schizophrenia_info':
+                    content = `<h2>What to Do About Schizophrenia</h2><p>When navigating life with schizophrenia, it's important to surround yourself with love and support! 🌼 Start by creating a safe and comforting environment—cozy blankets and soothing scents can help! 🧘‍♀️ Building a routine can provide stability; think of it as a cozy rhythm for your day! Connecting with trusted friends or family is super important; sharing your feelings helps lighten your heart! 🌈 Seeking professional support from a therapist or psychiatrist is a lovely step too—they can guide you toward helpful coping strategies. 🌟 Engaging in calming activities like drawing, journaling, or listening to music can also provide joy! Remember, it’s perfectly okay to take your time on this journey; every small step counts! You’re not alone, and brighter days are ahead! 💖</p>`;
+                    break;
+                case 'schizophrenia_symptoms':
+                    content = `<h2>Schizophrenia Symptoms</h2><p>Schizophrenia can feel like a puzzling experience, and recognizing its symptoms is key to understanding! 🧩 Common symptoms may include hallucinations, like hearing voices or seeing things that aren’t there—such a tricky feeling! 😢 Delusions, or strong beliefs in things that aren’t real, can also occur, leading to confusion. You might notice changes in your thoughts, making it hard to express yourself clearly. 🌪️ Emotional flatness, where you might feel less connected to your emotions or surroundings, can happen too. It’s important to remember that you’re not alone; understanding these symptoms helps you know what to expect and how to seek support! 🌈 Seeking help from loved ones and professionals can pave the way for brighter days ahead! 💕</p>`;
+                    break;
+                case 'schizophrenia_causes':
+                    content = `<h2>Causes of Schizophrenia</h2><p>The causes of schizophrenia can be complex, and it’s often a mix of factors! 🌼 Genetics play a role—if someone in your family has experienced it, you might be at higher risk. Environmental factors, such as prenatal exposure to infections or stress, can also contribute. 🌀 Brain chemistry and structure might be involved too, as imbalances in neurotransmitters can affect how you think and feel. 🌟 It’s important to remember that experiencing schizophrenia isn’t a personal failing; it’s a health condition! Understanding these factors helps remove the stigma, and knowing there’s support available can be comforting. You are deserving of kindness and care on this journey! 💖</p>`;
+                    break;
+                case 'schizophrenia_treatments':
+                    content = `<h2>Schizophrenia Treatments</h2><p>Treating schizophrenia is like wrapping yourself in a warm blanket of support! 💕 Antipsychotic medications can be very helpful in managing symptoms, allowing you to feel more balanced. It’s essential to work closely with a healthcare professional to find the right medication for you. 🌈 Therapy, like cognitive-behavioral therapy (CBT), can help you develop coping skills and improve your daily functioning. 🌼 Engaging in activities that bring you joy, like art or nature walks, can provide additional support. Joining support groups lets you connect with others who understand your journey—together, you can share experiences and encouragement! 🌟 Remember, every step you take toward treatment and self-care is a victory, and you’re not alone in this! 💖.</p>`;
+                    break;
+                case 'schizophrenia_help':
+                    content = `<h2>Reaching out for help when living with schizophrenia is a brave and important step! 🌼 Connecting with a mental health professional is crucial; they can provide tailored support and guidance. 📞 Hotlines are available for those moments when you need someone to talk to, offering a compassionate ear anytime! 🫂 Don’t hesitate to confide in trusted friends or family—they want to help you and share the journey with you. 🌈 Support groups are a wonderful way to meet others who understand your experiences, allowing you to find community and encouragement. Remember, asking for help is a sign of strength, and there’s a world of support ready to embrace you! 🌟 Each little step you take is a beautiful part of your journey toward healing! 💖</p>`;
+                    break;
+                case 'eating_info':
+                    content = `<h2>What to Do About Eating Disorders</h2><p>When dealing with an eating disorder, it's important to approach your healing journey with love and care! 🌼 Start by seeking professional help from a therapist or a dietitian who specializes in eating disorders; they can provide you with the right tools and guidance. 🩺 Surround yourself with supportive friends and family who uplift you and encourage a positive mindset! Creating a self-care routine that includes calming activities, like journaling or mindfulness exercises, can be super beneficial. 🌈 Remember to celebrate small victories—every step counts! Make mealtime a cozy experience by enjoying meals in a peaceful environment with comforting music or a favorite show. 🌟 You’re deserving of kindness and nourishment, so take it one day at a time, and know that brighter days are ahead! 💖p>`;
+                    break;
+                case 'eating_symptoms':
+                    content = `<h2>Eating disorders can manifest in various ways, and recognizing the symptoms is the first step to getting help! 🥗 Common signs include significant changes in eating habits, like restricting food or binge eating. You might notice an intense preoccupation with weight and body image, leading to feelings of guilt or shame after eating. 😢 Physical symptoms can also arise, such as fatigue, dizziness, or changes in skin and hair. If you find yourself isolating from friends during meals or avoiding social situations centered around food, that could be a signal too! 🌪️ Understanding these symptoms can empower you to seek support, as recognizing them is key to your healing journey! Remember, you are not alone, and help is always within reach! 🌈💕</p>`;
+                    break;
+                case 'eating_causes':
+                    content = `<h2>Causes of Eating Disorders</h2><p>The causes of eating disorders can be complex and vary from person to person! 🌼 Genetic predisposition can play a role; if someone in your family has struggled with eating issues, you might be at higher risk. Environmental factors, such as cultural pressures, trauma, or bullying, can contribute significantly to the development of eating disorders. 🌪️ Psychological aspects, including low self-esteem and perfectionism, may also play a part in driving disordered eating behaviors. It’s essential to understand that experiencing an eating disorder isn’t a personal failure; it’s a health condition that deserves compassion and care! 🌟 Knowing these causes helps to reduce stigma and empowers individuals to seek the support they need! 💖p>`;
+                    break;
+                case 'eating_treatments':
+                    content = `<h2>Eating Disorder Treatments</h2><p>Treating an eating disorder is like wrapping yourself in a warm, supportive hug! 💕 A combination of therapy and medical care is often most effective. Cognitive-behavioral therapy (CBT) can help you change negative thought patterns and develop healthier behaviors around food. 🌈 Nutritional counseling with a registered dietitian provides guidance on balanced eating and rebuilding a healthy relationship with food. 🥗 Support groups can also be incredibly helpful, allowing you to connect with others who understand your journey. 🌼 Medication may be prescribed to manage underlying issues, like anxiety or depression. Remember, every step toward recovery is a victory, and seeking help is a sign of strength! You’re deserving of love, care, and a joyful life! 🌟💖</p>`;
+                    break;
+                case 'eating_help':
+                    content = `<h2>Reaching out for help with an eating disorder is an important step toward healing! 🌼 Start by confiding in a trusted friend or family member who can support you on this journey. Connecting with a mental health professional who specializes in eating disorders can provide tailored support and guidance. 🩺 Hotlines and helplines are available for those moments when you need someone to talk to—don’t hesitate to reach out! 🌈 Support groups allow you to meet others who understand your experience, offering a sense of community and shared understanding. Remember, asking for help is a sign of courage, and there’s a world of support ready to embrace you! 🌟 Each small step you take is a beautiful part of your journey toward healing and self-love! 💖</p>`;
+                    break;
+                case 'disruptive_info':
+                    content = `<h2>What to Do About Disruptive Behavior Disorders</h2><p>If you’re facing disruptive behavior disorder, it’s essential to approach your situation with kindness and patience! 🌼 First, seeking professional help from a therapist who specializes in behavioral issues can be super beneficial. They can help you explore underlying feelings and teach coping strategies. 🌈 Establishing a consistent routine can create a sense of stability, making it easier to manage emotions. Engaging in positive activities, like sports or creative arts, can help channel energy constructively! 🏀✨ Surround yourself with supportive friends and family who understand your journey and can offer encouragement. Remember, small steps matter—each positive change is a victory! 🌟 Always practice self-compassion; everyone has challenges, and you’re not alone in this journey! Embrace your unique self and know that brighter days are ahead! 💖</p>`;
+                    break;
+                case 'disruptive_symptoms':
+                    content = `<h2>Symptoms of Disruptive Behavior Disorders</h2><p>Disruptive behavior disorder can show up in various ways, and recognizing the symptoms is key to seeking help! 🌀 Common signs include frequent temper tantrums, persistent arguments with authority figures, and defiant or disobedient behavior. You might notice a tendency to blame others for your mistakes or an inability to follow rules, which can lead to conflicts at school or home. 🏠 It’s also important to look out for behaviors that disrupt the daily routine, such as property destruction or irritability. While these symptoms can be challenging, it’s essential to understand that they stem from underlying emotions that deserve compassion and care! 🌼 By recognizing these signs, you’re taking a big step towards seeking the support you need! You are worthy of help and understanding! 💕<p>`;
+                    break;
+                case 'disruptive_causes':
+                    content = `<h2>Causes of Disruptive Behavior Disorders</h2><p>The causes of disruptive behavior disorder can be quite complex, involving a mix of genetic, environmental, and psychological factors! 🌪️ Some children may have a family history of behavioral issues, making them more susceptible. Environmental influences, like exposure to violence or inconsistent parenting, can also play a significant role in the development of these behaviors. 🌼 Psychological factors, such as low self-esteem or struggles with peer relationships, can contribute too. It’s essential to remember that these behaviors are not a reflection of your character; they’re often responses to challenges and emotions that need attention and care! 🌈 Understanding the root causes can help you find the right support, making it easier to navigate your journey toward healing! 💖</p>`;
+                    break;
+                case 'disruptive_treatments':
+                    content = `<h2>Treatments for Disruptive Behavior Disorders</h2><p>Treating disruptive behavior disorder involves a compassionate and multifaceted approach! 🌼 Behavioral therapy is often effective, helping individuals learn new coping skills and improve their relationships. Techniques like cognitive-behavioral therapy (CBT) can help address negative thought patterns and reinforce positive behaviors. 🌈 In some cases, family therapy can be beneficial, providing a supportive environment for everyone involved. Parents can also receive training on effective discipline strategies to foster a positive home environment. 🏠 Medication may be prescribed if there are co-occurring conditions, like ADHD, to help manage symptoms. Remember, the road to healing is a journey, and seeking help is a sign of strength! Each step you take is a step toward a brighter, more fulfilling future! 🌟💖.</p>`;
+                    break;
+                case 'disruptive_help':
+                    content = `<h2>>Reaching out for help with Disruptive Behavior Disorders</h2><p> If you or someone you know is dealing with disruptive behavior disorder, reaching out for help is an essential first step! 🌼 Start by talking to a trusted adult, like a parent or teacher, who can help connect you to the right resources. Consulting a mental health professional who specializes in behavioral disorders can provide tailored support and guidance. 🩺 Hotlines and community resources are also available for those moments when you need someone to talk to—don’t hesitate to reach out! 🌈 Support groups allow individuals to connect with others who share similar experiences, fostering a sense of belonging and understanding. Remember, asking for help is a courageous act, and there are many people and resources ready to support you on your journey! 🌟 You are deserving of love and compassion, and every step toward help is a step toward healing! 💖</p>`;
+                    break;
+                case 'neurodevelopmental_info':
+                    content = `<h2>What to Do About Neurodevelopmental Disorders</h2><p>If you or someone you know is dealing with a neurodevelopmental disorder, it’s essential to take gentle steps forward! 🌼 Seeking help from a healthcare professional is the first step; they can provide a proper diagnosis and support tailored to your needs. 🎈 Establishing a consistent daily routine can create a sense of security, making it easier to navigate daily challenges. Engage in activities that spark joy and creativity, like arts and crafts or outdoor play, to help express emotions and develop new skills! 🌈 Connecting with support groups can provide a sense of community; sharing experiences with others can lighten the load. Remember, everyone has their own unique journey, and it’s okay to ask for help along the way! 🌟 Embrace your strengths, and be kind to yourself—you’re doing amazing! 💖</p>`;
+                    break;
+                case 'neurodevelopmental_symptoms':
+                    content = `<h2>Neurodevelopmental Disorder Symptoms</h2><p>Neurodevelopmental disorders can manifest in a variety of ways, and recognizing the symptoms is key to seeking support! 🌪️ Common symptoms may include difficulties with communication, social interactions, and learning. Some individuals may struggle with focus and attention, while others may experience challenges in motor skills or sensory processing. 🧠 Emotional regulation can also be affected, leading to frustration or meltdowns in overwhelming situations. It’s important to understand that these symptoms don’t define you; they’re just part of the unique way your brain works! 🌼 Each individual is beautifully different, and recognizing these signs can be the first step toward getting the help and understanding you deserve! Remember, you are not alone on this journey; there are many people who care and want to support you! 💕</p>`;
+                    break;
+                case 'neurodevelopmental_causes':
+                    content = `<h2>Causes of Neurodevelopmental Disorders</h2><p>The causes of neurodevelopmental disorders are often complex and can involve a mix of genetic and environmental factors! 🧬 Some individuals may have a family history of similar disorders, making them more susceptible. Environmental influences, like exposure to toxins during pregnancy or early childhood, can also play a role. 🌍 Additionally, factors such as prenatal nutrition and maternal health can impact brain development. It’s crucial to understand that neurodevelopmental disorders are not anyone's fault; they are often the result of a combination of factors beyond anyone’s control! 🌈 By gaining a deeper understanding of these causes, we can foster empathy and support for those navigating these challenges. Remember, your uniqueness is a gift, and seeking help is a sign of strength! 💖</p>`;
+                    break;
+                case 'neurodevelopmental_treatments':
+                    content = `<h2>Treatments for Neurodevelopmental Disorders</h2><p>Treating neurodevelopmental disorders typically involves a multi-faceted approach that prioritizes understanding and support! 🌼 Early intervention is crucial, as it can significantly improve outcomes for individuals. Behavioral therapies, such as applied behavior analysis (ABA), can help develop social skills and reduce challenging behaviors. 🧠 Occupational therapy can assist with sensory integration and daily living skills, making everyday activities more manageable. Support from speech and language therapists can enhance communication skills, fostering more meaningful connections with others. 🌈 Medication may also be prescribed to manage specific symptoms, especially if there are co-occurring conditions. Remember, finding the right combination of therapies takes time and patience, and it’s perfectly okay to ask for help! Each small step you take is a giant leap toward a brighter future! 🌟💖</p>`;
+                    break;
+                case 'neurodevelopmental_help':
+                    content = `<h2>Getting Help for Neurodevelopmental Disorders</h2><p>Reaching out for help is a vital step for anyone dealing with a neurodevelopmental disorder! 🌼 Start by talking to a trusted adult, such as a parent, teacher, or school counselor, who can help guide you to the appropriate resources. Consulting with a healthcare professional who specializes in neurodevelopmental disorders can provide personalized support and strategies. 🩺 Support groups and community organizations can also offer a safe space to share experiences, connect with others, and learn valuable coping techniques! 🌈 There are many resources available, from helplines to online communities, all ready to lend a hand! Remember, asking for help is a brave act, and you deserve the love and support needed on your journey. 🌟 Each step toward help is a step toward healing, and you are not alone in this journey! 💖</p>`;
+                    break;
+            }
+
+            problemContent.innerHTML = content;
+        }
+
+        function goBack() {
+            const mainContainer = document.getElementById('main-container');
+            const problemContainer = document.getElementById('problem-container');
+            const helplineContainer = document.getElementById('helpline-container');
+
+            if (problemContainer.style.display === 'block') {
+                problemContainer.style.display = 'none';
+                mainContainer.style.display = 'block';
+            } else if (helplineContainer.style.display === 'block') {
+                helplineContainer.style.display = 'none';
+                mainContainer.style.display = 'block';
+            } else {
+                mainContainer.style.display = 'block';
+            }
+        }
+
+        function showHelpline() {
+            const mainContainer = document.getElementById('main-container');
+            const helplineContainer = document.getElementById('helpline-container');
+
+            mainContainer.style.display = 'none';
+            helplineContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

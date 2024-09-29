@@ -1,96 +1,138 @@
+/* General Body Styling */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;  /* Modern and clean font */
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ffcccb, #add8e6);
+  background: linear-gradient(135deg, #ff99cc, #66ccff); /* Softer pink-blue gradient */
   color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
+/* Header Styling */
 header {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
-  border-bottom: 5px solid #ff6f61;
+  border-bottom: 5px solid #ff6699;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Gentle shadow for elegance */
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin: 0;
+  color: #ff6699; /* Pink to match the overall color scheme */
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.3em;
+  color: #555; /* Slightly darker for better contrast */
 }
 
+/* Button Container for Dropdown */
 .button-container {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  flex-wrap: wrap;
+  margin: 30px 0;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin: 0 10px;
-}
-
+/* Dropdown Button Styling */
 .dropbtn {
-  background-color: #ff6f61;
+  background-color: #ff6699;
   color: white;
   padding: 15px 30px;
-  border-radius: 25px;
+  border-radius: 30px;
   font-size: 1.2em;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   border: none;
+  margin: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Larger shadow for a classier feel */
 }
 
 .dropbtn:hover {
-  background-color: #ffcccb;
+  background-color: #ff99cc;
+  transform: translateY(-3px); /* Adds a subtle 3D effect on hover */
 }
 
+/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #ffffff;
-  min-width: 200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  min-width: 250px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   z-index: 1;
 }
 
 .dropdown-content a {
   color: #333;
-  padding: 12px 16px;
+  padding: 15px 20px;
   text-decoration: none;
   display: block;
+  font-size: 1.1em;
 }
 
 .dropdown-content a:hover {
-  background-color: #ffcccb;
+  background-color: #ff99cc;
+  color: #fff;
+  border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.about-us, .contact-us {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  width: 80%;
-  max-width: 600px;
+/* About Us Section */
+.about-us {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 30px 0;
+  width: 85%;
+  max-width: 650px;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for elegance */
 }
 
-.about-us h2, .contact-us h2 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
+.about-us h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #ff6699; /* To match the header */
+}
+
+.about-us p {
+  font-size: 1.2em;
+  color: #666; /* Slightly muted for a modern feel */
+  line-height: 1.8;
+}
+
+/* Contact Us Section */
+.contact-us {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 30px 0;
+  width: 85%;
+  max-width: 650px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-us h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #ff6699;
 }
 
 .contact-us ul {
@@ -99,26 +141,42 @@ p {
   margin: 0;
 }
 
+/* Contact Us Icons */
 .contact-us li {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .contact-us a {
-  color: #ff6f61;
+  color: #ff6699;
   text-decoration: none;
+  font-size: 1.5em; /* Larger text for more emphasis */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact-us a i {
+  margin-right: 15px;
+  font-size: 2em; /* Icons are larger for visual impact */
 }
 
 .contact-us a:hover {
-  text-decoration: underline;
+  color: #333;
+  transform: scale(1.1); /* Subtle zoom effect on hover */
 }
 
+/* Footer Styling */
 footer {
-  margin-top: auto;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   width: 100%;
   text-align: center;
-  padding: 10
+  padding: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
 
-
-
+footer p {
+  color: #555;
+  font-size: 1em;
 }

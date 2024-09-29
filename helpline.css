@@ -32,7 +32,9 @@ p {
   font-size: 1.2rem;
 }
 
-.helplines, .about-us, .contact-us {
+.helplines,
+.about-us,
+.contact-us {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 20px;
@@ -62,4 +64,31 @@ a:hover {
 footer {
   margin-top: 40px;
   font-size: 0.9rem;
+}
+
+/* Social Buttons Styles */
+.social-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 15px; /* Space between buttons */
+  margin-top: 15px; /* Space above the social buttons */
+}
+
+.social-btn {
+  background: #FF4081; /* Pink background */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  display: flex; /* Use flex for alignment */
+  align-items: center; /* Center icon and text vertically */
+  transition: background 0.3s; /* Smooth transition */
+}
+
+.social-btn:hover {
+  background: #e91e63; /* Darker pink on hover */
+}
+
+.social-btn i {
+  margin-right: 5px; /* Space between icon and text */
 }
