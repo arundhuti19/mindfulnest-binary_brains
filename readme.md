@@ -91,9 +91,38 @@ Both developers are committed to making MindfulNest a comprehensive and compassi
 Contact
 For any questions, suggestions, or feedback, feel free to reach out:
 
-Gmail: dasmahika2005@gmail.com
+Gmail: dasmahika2005@gmail.com & arundhutisinha143@gmail.com
 WhatsApp: WhatsApp Us
 Instagram: MindfulNest Instagram
 YouTube: MindfulNest YouTube
 We look forward to connecting with you and making a positive impact on mental health together. 😊
 
+ SOURCES TOPIC 
+
+ * ChatGPT
+ * Youtube
+
+REDIRECTING LINKS 
+
+https://www.nimh.nih.gov/health/topics/depression
+https://www.nhs.uk/mental-health/self-help/tips-and-support/cope-with-depression/
+https://www.everydayhealth.com/depression/guide/resources/
+https://www.imdb.com/title/tt1659337/
+https://www.youtube.com/@anxietycoachespodcast
+https://kidshealth.org/en/teens/depression.html
+https://my.clevelandclinic.org/health/diseases/9536-anxiety-disorders
+https://www.healthline.com/health/mental-health/how-to-cope-with-anxiety
+https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anxiety-fear-panic/
+https://www.imdb.com/title/tt1517451/
+https://www.youtube.com/watch?si=EBms1YQktQWPq5x7&v=01wcrrAYrpM&feature=youtu.be
+https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide/
+https://www.nimh.nih.gov/health/topics/bipolar-disorder
+https://www.bipolaruk.org/blog/living-with-bipolar
+https://www.dbsalliance.org/
+https://www.imdb.com/title/tt1045658/
+https://www.youtube.com/@bipolarvoices
+https://www.healthcentral.com/condition/bipolar-disorder?legacy=psycom
+https://www.nami.org/Your-Journey/Individuals-with-Mental-Illness/Others
+https://www.imdb.com/title/tt0120815/
+https://www.bbc.co.uk/sounds/search/mental%20health
+https://www.samhsa.gov/mental-health
