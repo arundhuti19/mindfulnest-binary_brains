@@ -3,144 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Tracker - Mood Tracker 🌈</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <title>Health Tracker 🌼</title>
     <link rel="stylesheet" href="tracker.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div id="login-container">
-        <h1>Welcome to the Health Tracker 🌼</h1>
-        <div id="auth">
-            <a href="login.html"><button>Login</button><a/>
-            <a href ="register.html"><button >Sign Up</button></a>
-        </div>
+    <header>
+        <div class="logo">🌿 Health Tracker 🌸</div>
+        <nav>
+            <ul>
+                <li><a href="resources.html"><button>Resources</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="tracker">
+            <h2>🌼 Track Your Health</h2>
+            <form id="trackerForm">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <label for="steps">Steps:</label>
+                <input type="number" id="steps">
+                
+                <label for="water">Water Intake (liters):</label>
+                <input type="number" id="water" step="0.1">
+                
+                <label for="heartRate">Heart Rate (bpm):</label>
+                <input type="number" id="heartRate">
+                
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" step="0.1">
+                
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" step="0.1">
 
-        <div id="login-form" style="display: none;">
-            <h2>Login</h2>
-            <input type="text" id="login-username" placeholder="Username" />
-            <input type="password" id="login-password" placeholder="Password" />
-            <button onclick="login()">Submit</button>
-            <button onclick="hideLogin()">Cancel</button>
-        </div>
+                <button type="submit">Add Entry 🌟</button>
+            </form>
+        </section>
+        
+        <section id="progress">
+            <h2>Your Progress 📈</h2>
+            <canvas id="progressChart" width="400" height="200"></canvas>
+            <ul id="entryList"></ul>
+        </section>
 
-        <div id="signup-form" style="display: none;">
-            <h2>Sign Up</h2>
-            <input type="text" id="signup-username" placeholder="Choose Username" />
-            <input type="password" id="signup-password" placeholder="Password" />
-            <button onclick="signup()">Create Account</button>
-            <button onclick="hideSignup()">Cancel</button>
-        </div>
-    </div>
-
-    <div id="mood-tracker" style="display: none;">
-        <h1>Track Your Mood 🌈</h1>
-        <div class="emotion-buttons">
-            <button class="mood-button" onclick="recordMood('happy')">Happy 😊</button>
-            <button class="mood-button" onclick="recordMood('sad')">Sad 😢</button>
-            <button class="mood-button" onclick="recordMood('angry')">Angry 😠</button>
-            <button class="mood-button" onclick="recordMood('neutral')">Neutral 😐</button>
-            <button class="mood-button" onclick="recordMood('anxious')">Anxious 😟</button>
-        </div>
-
-        <div class="calendar">
-            <h2>Select Date 🗓️</h2>
-            <input type="date" id="mood-date" />
-        </div>
-
-        <button onclick="toggleChart()">Toggle Mood Chart 📊</button>
-
-        <div class="chart-container" id="chart-container" style="display: none;">
-            <canvas id="moodChart"></canvas>
-        </div>
-    </div>
-
-    <script>
-        const moodData = {
-            happy: 0,
-            sad: 0,
-            angry: 0,
-            neutral: 0,
-            anxious: 0,
-        };
-
-        let loggedIn = false;
-
-        function showLogin() {
-            document.getElementById('login-container').style.display = 'none';
-            document.getElementById('login-form').style.display = 'block';
-        }
-
-        function hideLogin() {
-            document.getElementById('login-container').style.display = 'block';
-            document.getElementById('login-form').style.display = 'none';
-        }
-
-        function showSignup() {
-            document.getElementById('login-container').style.display = 'none';
-            document.getElementById('signup-form').style.display = 'block';
-        }
-
-        function hideSignup() {
-            document.getElementById('login-container').style.display = 'block';
-            document.getElementById('signup-form').style.display = 'none';
-        }
-
-        function login() {
-            // Simulate a successful login
-            loggedIn = true;
-            document.getElementById('login-container').style.display = 'none';
-            document.getElementById('mood-tracker').style.display = 'block';
-        }
-
-        function signup() {
-            // Simulate a successful signup
-            alert('Account created! You can now log in.');
-            hideSignup();
-        }
-
-        function recordMood(mood) {
-            moodData[mood]++;
-            alert(`You recorded your mood as ${mood}!`);
-            updateChart();
-        }
-
-        function toggleChart() {
-            const chartContainer = document.getElementById('chart-container');
-            chartContainer.style.display = chartContainer.style.display === 'none' ? 'block' : 'none';
-            if (chartContainer.style.display === 'block') {
-                updateChart();
-            }
-        }
-
-        function updateChart() {
-            const ctx = document.getElementById('moodChart').getContext('2d');
-            const moodChart = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: Object.keys(moodData),
-                    datasets: [{
-                        label: 'Mood Distribution',
-                        data: Object.values(moodData),
-                        backgroundColor: [
-                            '#ff9999',
-                            '#66b3ff',
-                            '#99ff99',
-                            '#ffcc99',
-                            '#c2c2f0'
-                        ],
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                    }
-                }
-            });
-        }
-    </script>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Health Tracker. All rights reserved. 🍃</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

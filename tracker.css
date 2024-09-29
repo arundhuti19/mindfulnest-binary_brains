@@ -1,68 +1,115 @@
 body {
-  background: linear-gradient(to bottom right, #f0e1ff, #a0d4fa);
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #f8e3e3, #d1e8f7); /* Soft Pink to Light Blue gradient */
+  margin: 0;
+  padding: 0;
+  color: #4b3c59; /* Soft Purple for text */
+}
+
+header {
+  background-color: rgba(255, 230, 230, 0.9); /* Light Pink background */
+  color: #4b3c59; /* Soft Purple for text */
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e8c8d2; /* Subtle Light Purple border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  margin-bottom: 20px;
-  color: #333;
+header .logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
 }
 
-.emotion-buttons {
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #4b3c59; /* Soft Purple for links */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #ff9aa2; /* Light Pink on hover */
+  color: #fff; /* White text on hover */
+}
+
+section {
+  background: rgba(255, 230, 230, 0.9); /* Light Pink for sections */
+  border-radius: 12px;
+  padding: 25px;
   margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.mood-button {
-  padding: 10px 15px;
-  margin: 5px;
-  background: #a0d4fa;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
+h2 {
+  color: #4b3c59; /* Soft Purple for headings */
+  border-bottom: 2px solid #e8c8d2; /* Subtle Light Purple border */
+  padding-bottom: 10px;
+  font-size: 1.8em; /* Larger heading size */
 }
 
-.mood-button:hover {
-  background: #7ec3e8;
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
 }
 
-.calendar {
-  margin-top: 20px;
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #d1e8f7; /* Light Blue for input borders */
+  border-radius: 8px;
+  transition: border-color 0.3s;
 }
 
-#login-container, #login-form, #signup-form {
-  margin: 20px 0;
-}
-
-input[type="text"], input[type="password"], input[type="date"] {
-  padding: 10px;
-  border: 2px solid #a0d4fa;
-  border-radius: 10px;
-  margin: 5px 0;
-  width: 200px;
+input:focus {
+  border-color: #ff6f91; /* Pink on focus */
 }
 
 button {
-  padding: 10px 15px;
-  margin: 5px;
-  background: #a0d4fa;
+  background-color: #ff6f91; /* Soft Pink for buttons */
+  color: #ffffff; /* White for button text */
+  padding: 12px;
   border: none;
-  border-radius: 10px;
-  color: white;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background: #7ec3e8;
+  background-color: #ff4f70; /* Darker Pink on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
-.chart-container {
-  margin: 20px auto;
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: rgba(255, 230, 230, 0.9); /* Light Pink for footer */
+  color: #4b3c59; /* Soft Purple for footer text */
   position: relative;
-  width: 80%;
-  max-width: 600px;
+  bottom: 0;
+  width: 100%;
+}
+
+canvas {
+  margin: 20px 0;
+  border-radius: 12px; /* Rounded corners for canvas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

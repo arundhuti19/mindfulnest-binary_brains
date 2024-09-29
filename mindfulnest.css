@@ -7,134 +7,177 @@
 
 /* Body styles */
 body {
-  font-family: 'Arial', sans-serif; /* Mature and friendly font */
+  font-family: 'Lora', serif; /* Professional font for body text */
   background: linear-gradient(135deg, #e0c3fc, #f9d0c4); /* Soft blue-pink-purple gradient */
   color: #333; /* Text color */
+  text-align: center; /* Center-align all text */
 }
 
 /* Header styles */
 header {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between items */
-  align-items: center; /* Center items vertically */
-  padding: 20px; /* Padding around the header */
-}
-
-/* Heading styles */
-h1 {
-  font-family: Arial, Helvetica, sans-serif, cursive; /* Pretty font */
-  font-size: 3em; /* Large heading size */
-  text-align: center; /* Center the text */
-  text-decoration: underline; /* Underline the heading */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 2.5em;
   color: #5b5ea6; /* Darker gradient color */
-  margin: 0; /* Remove margin */
+  font-family: 'Lora', serif; /* Professional header font */
 }
 
-/* Login button styles */
-.login-btn {
-  background: #ffccd5; /* Light pink button color */
-  color: #ffffff; /* White text color */
-  border: none; /* No border */
-  padding: 10px 20px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background 0.3s; /* Smooth transition */
-}
-
-/* Login button hover effect */
-.login-btn:hover {
-  background: #ffb3c1; /* Darker pink on hover */
-}
-
-/* Main content styles */
-main {
-  text-align: center; /* Center text */
-  margin: 50px 20px; /* Margin around main content */
-}
-
-/* Moody cupcake heading styles */
+/* Welcome text (Pookie) styles */
 .moody-cupcake {
-  font-size: 2em; /* Larger font for the welcome message */
+  font-family: 'Pacifico', cursive; /* Playful font for Pookie */
+  font-size: 2.5em; /* Increased size for welcome text */
   color: #ff69b4; /* Pink color */
+  margin-top: 20px;
+}
+
+/* Section heading styles */
+section h3 {
+  font-family: 'Playfair Display', serif; /* Elegant, serif font for section headings */
+  font-size: 2.2em; /* Larger font size for section headings */
+  color: #5b5ea6; /* Darker gradient color */
+  margin-bottom: 15px; /* Space below the headings */
+  text-transform: uppercase; /* Make the headings uppercase */
+  letter-spacing: 1px; /* Slight spacing for elegance */
 }
 
 /* Mission section styles */
 .mission {
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  padding: 20px; /* Padding for mission section */
-  border-radius: 10px; /* Rounded corners */
-  margin: 20px 0; /* Margin above and below */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* About Us section styles */
+/* About Us Section */
 .about-us {
-  background: #ffe1f0; /* Light pink background */
-  padding: 20px; /* Padding for about section */
-  border-radius: 10px; /* Rounded corners */
-  margin: 20px 0; /* Margin above and below */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 30px auto; /* Center the section horizontally */
+  width: 85%;
+  max-width: 650px;
+  text-align: center; /* Center-align the text inside the section */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for elegance */
+}
+
+.about-us h3 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #ff6699; /* To match the header */
+  text-align: center; /* Center-align the heading */
+}
+
+.about-us p {
+  font-size: 1.2em;
+  color: #666; /* Slightly muted for a modern feel */
+  line-height: 1.8;
+  text-align: center; /* Center-align the paragraph text */
 }
 
 /* Button styles */
 .buttons {
-  display: flex; /* Use flexbox for buttons */
-  justify-content: center; /* Center buttons */
-  gap: 10px; /* Space between buttons */
-  flex-wrap: wrap; /* Allow wrapping to new line */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-/* General button styles */
 button {
-  background: #ff99ac; /* Medium pink button color */
-  color: white; /* Button text color */
-  border: none; /* No border */
-  padding: 15px 25px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 1em; /* Font size for buttons */
-  transition: background 0.3s; /* Smooth transition */
+  background: #ff99ac;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Button hover effect */
 button:hover {
-  background: #ff85a1; /* Darker pink on hover */
+  background: #ff85a1;
+  transform: scale(1.05);
 }
 
-/* Contact Us section styles */
+/* Contact Us Section */
 .contact-us {
-  background: linear-gradient(135deg, #ffcccb, #ffb3e6); /* Gradient background */
-  padding: 20px; /* Padding for contact section */
-  border-radius: 10px; /* Rounded corners */
-  margin: 20px 0; /* Margin above and below */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 30px auto;
+  width: 85%;
+  max-width: 650px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact button styles */
-.contact-buttons {
-  display: flex; /* Use flexbox for buttons */
-  justify-content: center; /* Center buttons */
-  gap: 15px; /* Space between buttons */
+.contact-us h3 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #ff6699;
+  text-align: center;
+}
+
+.contact-us ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Contact Us Icons */
+.contact-us li {
+  margin: 20px 0;
+}
+
+.contact-us a {
+  color: #ff6699;
+  text-decoration: none;
+  font-size: 1.5em; /* Larger text for more emphasis */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact-us a i {
+  margin-right: 15px;
+  font-size: 2em; /* Icons are larger for visual impact */
+}
+
+.contact-us a:hover {
+  color: #333;
+  transform: scale(1.1); /* Subtle zoom effect on hover */
 }
 
 /* Social button styles */
 .social-btn {
-  background: #ff6680; /* Bright pink for social buttons */
-  color: white; /* Button text color */
-  text-decoration: none; /* Remove underline from links */
-  padding: 15px 25px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners */
-  font-weight: bold; /* Bold text */
-  transition: background 0.3s, transform 0.3s; /* Smooth transition */
+  background: #ff6680;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
 }
 
-/* Social button hover effect */
 .social-btn:hover {
-  background: #ff4d6d; /* Darker pink on hover */
-  transform: scale(1.05); /* Slightly grow button on hover */
+  background: #ff4d6d;
+  transform: scale(1.05);
 }
 
-/* Social icon styles */
 .social-btn i {
   margin-right: 8px; /* Space between icon and text */
+}
+
+/* Center alignment for text within sections */
+.mission h3,
+.about-us h3,
+.contact-us h3,
+.mission p,
+.about-us p {
+  text-align: center; /* Center-align section titles and text */
 }
