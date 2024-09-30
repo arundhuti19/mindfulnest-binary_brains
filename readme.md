@@ -126,3 +126,8 @@ https://www.nami.org/Your-Journey/Individuals-with-Mental-Illness/Others
 https://www.imdb.com/title/tt0120815/
 https://www.bbc.co.uk/sounds/search/mental%20health
 https://www.samhsa.gov/mental-health
+
+
+DEPLOYMENT LINK
+
+https://arundhuti19.github.io/mindfulnest-binary_brains/
