@@ -131,3 +131,8 @@ https://www.samhsa.gov/mental-health
 DEPLOYMENT LINK
 
 https://arundhuti19.github.io/mindfulnest-binary_brains/
+
+
+YOUTUBE VIDEO LINK (workings of the project)
+
+https://youtu.be/QEOja-thv0A?si=ry7uXuj45J9o-h1F
